@@ -1,0 +1,23 @@
+query Event($slug: String!) {
+    eventBySlug(slug: $slug) {
+        id
+        name
+        dateTime
+        address
+        city
+        state
+        eventDetails
+        heroImg
+        races {
+            id
+            name
+            distance
+            route {
+                points
+                route
+                routeStartMarker
+                routeEndMarker
+            }
+        }
+    }
+}
